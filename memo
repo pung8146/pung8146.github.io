@@ -1,0 +1,8 @@
+1. npx gatsby-cil 로 프로젝트 설치
+2. gatsby develop 으로 프로젝트 실행
+3. 종료후 Root 폴더 수정
+4. 타임스크립트 설치 
+   yarn add typescript --dev
+   또, Gatsby에서 타입스크립트를 사용하기 위한 플러그인도 설치해줍니다.
+   yarn add gatsby-plugin-typescript
+5. eslint , Prettier 확장기능 추가

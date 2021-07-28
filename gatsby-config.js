@@ -22,6 +22,31 @@ module.exports = {
     // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-remark-prismjs',
+      options: {
+        clasPreFix : 'language-',
+      },
+    },
+    {
+      resolve: 'gatsby-remark-images',
+      options: {
+        maxWidth: 768,
+        quality: 100,
+        withWebp: true,
+      },
+    },
+    {
+      resolve: 'gatsby-remark-copy-linked-files',
+      options: {},
+    },
+    {
+      resolve: 'gatsby-remark-external-links',
+      options: {
+        target: '_blank',
+        rel: 'nofollw',
+      }
+    }
     `gatsby-plugin-emotion`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: <https://gatsby.dev/offline>

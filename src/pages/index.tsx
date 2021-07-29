@@ -1,24 +1,25 @@
-import React, {FunctionComponent } from "react";
+import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import GlobalStyle from 'components/Common/GlobalStyle';
 import Footer from 'components/Common/Footer';
-import CategoryList from "components/Main/CategoryList";
+import CategoryList from 'components/Main/CategoryList';
 import Introduction from 'components/Main/Introduction';
-import PostList from 'components/Main/PostList';
-import {graphql} from 'gatsby';
+import PostList, { PostType } from 'components/Main/PostList';
+import { ProfileImageProps } from 'components/Main/ProfileImage';
+import { graphql } from 'gatsby';
 
 interface IndexPageProps {
-    data: {
-      allMarkdownRemark: {
-        edges: PostType[];
-      };
-      file: {
-          childImageSharp: {
-              fluid: any;
-          };
+  data: {
+    allMarkdownRemark: {
+      edges: PostType[];
+    };
+    file: {
+      childImageSharp: {
+        fluid: ProfileImageProps['profileImage'];
       };
     };
-  }
+  };
+}
 
 const CATEGORY_LIST = {
     ALL : 5,
@@ -43,7 +44,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     return (
         <Container>
             <GlobalStyle />
-            <Introduction />
+            <Introduction  profileImage={fluid}/>
             <CategoryList selectedCategory="Web" categoryList={CATEGORY_LIST} />
             <PostList posts={edges}/>
             <Footer />
@@ -76,11 +77,18 @@ export const queryPostList = graphql`
                 ) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
-              }
             }
           }
         }
       }
     }
   }
+  file(name: { eq: "profile-image" }) {
+    childImageSharp {
+      fluid(maxWidth: 120, maxHeight: 120, fit: INSIDE, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp
+      }
+    }
+  }
+}
 `;

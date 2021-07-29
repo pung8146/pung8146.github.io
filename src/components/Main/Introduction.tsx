@@ -1,6 +1,8 @@
-import React,{FunctionComponent} from "react";
+import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
-import ProfileImage from 'components/Main/ProfileImage';
+import ProfileImage, { ProfileImageProps } from 'components/Main/ProfileImage';
+
+type IntroductionProps = ProfileImageProps;
 
 const Background = styled.div`
 width:100%;
@@ -42,11 +44,13 @@ font-weight:700;
     font-size:25px;
 `;
 
-const Introduction: FunctionComponent = function() {
+const Introduction: FunctionComponent<IntroductionProps> = function({
+    profileImage,
+}) {
     return (
         <Background>
             <Wrapper>
-                <ProfileImage />
+                <ProfileImage profileImage={profileImage}/>
 
                 <div>
                     <SubTitle>Nice to Meet You,</SubTitle>

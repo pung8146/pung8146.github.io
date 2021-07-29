@@ -1,11 +1,17 @@
 import React,{FunctionComponent} from "react";
 import styled from '@emotion/styled';
+import Img, {FluidObject } from 'gatsby-image';
 
-// 프로필 이미지링크 차후수정
-const PROFILE_IMAGE_LINK =
-  'https://img.hani.co.kr/imgdb/resize/2019/0121/00501111_20190121.JPG';
+export interface ProfileImageProps {
+  profileImage: FluidObject;
+}
 
-const ProfileImageWrapper = styled.img`
+
+// // 프로필 이미지링크 차후수정
+// const PROFILE_IMAGE_LINK =
+//   'https://img.hani.co.kr/imgdb/resize/2019/0121/00501111_20190121.JPG';
+
+const ProfileImageWrapper = styled(Img)`
     width:120px;
     height:120px;
     margin-bottom:30px;
@@ -17,9 +23,10 @@ const ProfileImageWrapper = styled.img`
     }
 `;
 
-const ProfileImage : FunctionComponent = function() {
-    return <ProfileImageWrapper src={PROFILE_IMAGE_LINK} alt="Profile Image" />;
+const ProfileImage : FunctionComponent<ProfileImageProps> = function({
+  profileImage,
+}) {
+    return <ProfileImageWrapper fluid={profileImage} alt="Profile Image" />;
 };
 
 export default ProfileImage;
-

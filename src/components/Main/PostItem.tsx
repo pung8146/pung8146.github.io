@@ -104,18 +104,18 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
         <PostItemWrapper to={link}>
           <ThumbnailImage fluid={fluid} alt="Post Item Image" />
         
-        <PostItemContent>
-            <Title>{title}</Title>
-            <Date>{date}</Date>
-            <Category>
-                {categories.map(category=> (
-                    <CategoryItem key={category}>{category}</CategoryItem>
-                ))}
-            </Category>
-            <Summary>{summary}</Summary>
-        </PostItemContent>
+          <PostItemContent>
+        <Title>{title}</Title>
+        <Date>{date}</Date>
+        <Category>
+          {categories.map(item => (
+            <CategoryItem key={item}>{item}</CategoryItem>
+          ))}
+        </Category>
+        <Summary>{summary}</Summary>
+      </PostItemContent>
     </PostItemWrapper>
-    );
+  );
 };
 
 export default PostItem;

@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Hoon develop blog`,
+    description: `gatsby로 만들고 있는 블로그입니다..`,
+    author: `Hoon`,
+    siteUrl: 'https://pung8146.github.io/BlogGatsby/', // 배포 후 변경 예정
   },
   plugins: [
     {
@@ -12,8 +13,22 @@ module.exports = {
         allExtensions: true,
       },
     },
+    'gatsby-plugin-sitemap',
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://pung8146.github.io/BlogGatsby/',
+        stripQueryString: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

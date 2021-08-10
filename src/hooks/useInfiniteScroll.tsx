@@ -15,6 +15,9 @@ const useInfiniteScroll = function (
   const containerRef: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(
     null,
   );
+  const observer: MutableRefObject<IntersectionObserver | null> = useRef<IntersectionObserver>(
+    null,
+  );
   const [count, setCount] = useState<number>(1);
 
   const postListByCategory = useMemo<PostType[]>(
@@ -27,28 +30,30 @@ const useInfiniteScroll = function (
     [selectedCategory],
   );
 
-  const observer: IntersectionObserver = new IntersectionObserver(
-    (entries, observer) => {
+  useEffect(() => {
+    observer.current = new IntersectionObserver((entries, observer) => {
       if (!entries[0].isIntersecting) return;
 
       setCount(value => value + 1);
-      observer.disconnect();
-    },
-  );
-    useEffect(() => setCount(1), [selectedCategory]);
-    
-    useEffect(() => {
-        if (
-            NUMBER_OF_ITEMS_PER_PAGE * count >= postListByCategory.length ||
-            containerRef.current === null ||
-            containerRef.current.children.length === 0
-        )
-        return;
+      observer.unobserve(entries[0].target);
+    });
+  }, []);
 
-        observer.observe(
-            containerRef.current.children[containerRef.current.children.length -1],
-        );
-    }, [count, selectedCategory]);
+  useEffect(() => setCount(1), [selectedCategory]);
+
+  useEffect(() => {
+    if (
+      NUMBER_OF_ITEMS_PER_PAGE * count >= postListByCategory.length ||
+      containerRef.current === null ||
+      containerRef.current.children.length === 0 ||
+      observer.current === null
+    )
+      return;
+
+    observer.current.observe(
+      containerRef.current.children[containerRef.current.children.length - 1],
+    );
+  }, [count, selectedCategory]);
 
   return {
     containerRef,

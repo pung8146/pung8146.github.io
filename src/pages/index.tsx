@@ -1,7 +1,5 @@
 import React, { FunctionComponent, useMemo } from 'react';
-import styled from '@emotion/styled';
-import GlobalStyle from 'components/Common/GlobalStyle';
-import Footer from 'components/Common/Footer';
+import Template from 'components/Common/Template';
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList';
 import Introduction from 'components/Main/Introduction';
 import PostList, { PostType } from 'components/Main/PostList';
@@ -14,10 +12,18 @@ interface IndexPageProps {
     search: string;
   };
   data: {
+    site: {
+      siteMetadata: {
+        title: string;
+        description: string;
+        siteUrl: string;
+      };
+    };
     allMarkdownRemark: {
       edges: PostType[];
     };
     file: {
+      publicURL: string;
       childImageSharp: {
         fluid: ProfileImageProps['profileImage'];
       };
@@ -25,20 +31,18 @@ interface IndexPageProps {
   };
 }
 
-const Container = styled.div`
-    display:flex;
-    flex-direction: column;
-    height: 100vh;
-`;
-
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
-  location: {search},
-    data: {
-    allMarkdownRemark: {edges},
+  location: { search },
+  data: {
+    site: {
+      siteMetadata: { title, description, siteUrl },
+    },
+    allMarkdownRemark: { edges },
     file: {
-     childImageSharp : { fluid },
+      publicURL,
+      childImageSharp: { fluid },
     },
-    },
+  },
 }) {
   const parsed: ParsedQuery<string> = queryString.parse(search);
   const selectedCategory: string = 
@@ -71,30 +75,43 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     [],
   );
 
-    return (
-        <Container>
-            <GlobalStyle />
-            <Introduction  profileImage={fluid}/>
-            <CategoryList 
-              selectedCategory={selectedCategory} 
-              categoryList={categoryList} 
-            />
-            <PostList posts={edges}/>
-            < Footer />
-        </Container>
-    );
+  return (
+    <Template
+      title={title}
+      description={description}
+      url={siteUrl}
+      image={publicURL}
+    >
+      <Introduction profileImage={fluid} />
+      <CategoryList
+        selectedCategory={selectedCategory}
+        categoryList={categoryList}
+      />
+      <PostList selectedCategory={selectedCategory} posts={edges} />
+    </Template>
+  );
 };
 
 export default IndexPage;
 
 export const queryPostList = graphql`
   query queryPostList {
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }
     ) {
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             summary
@@ -110,18 +127,20 @@ export const queryPostList = graphql`
                 ) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
+              }
             }
           }
         }
       }
     }
-  }
-  file(name: { eq: "profile-image" }) {
-    childImageSharp {
-      fluid(maxWidth: 120, maxHeight: 120, fit: INSIDE, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp
+    file(name: { eq: "profile-image" }) {
+      publicURL
+      childImageSharp {
+        fluid(maxWidth: 120, maxHeight: 120, fit: INSIDE, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
     }
   }
-}
+  
 `;

@@ -3,7 +3,7 @@ module.exports = {
     title: `Hoon develop blog`,
     description: `gatsby로 만들고 있는 블로그입니다..`,
     author: `Hoon`,
-    siteUrl: 'https://pung8146.github.io/BlogGatsby/', // 배포 후 변경 예정
+    siteUrl: 'https://pung8146.github.io/', // 배포 후 변경 예정
   },
   plugins: [
     {
@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://pung8146.github.io/BlogGatsby/',
+        siteUrl: 'https://pung8146.github.io/',
         stripQueryString: true,
       },
     },

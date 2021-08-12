@@ -15,7 +15,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: flex-start;
-width:768px;
+width:80%;
 height:400px;
 margin:0 auto;
 

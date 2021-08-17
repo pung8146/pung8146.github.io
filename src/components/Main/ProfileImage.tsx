@@ -14,7 +14,7 @@ export interface ProfileImageProps {
 const ProfileImageWrapper = styled(Img)`
     width:120px;
     height:120px;
-    margin-bottom:30px;
+    margin-left:45%;
     border-radius:50%;
 
     @media(max-width: 768px) {

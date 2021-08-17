@@ -35,7 +35,7 @@ font-weight: 400;
 }
 `;
 
-const Title = styled.div`
+const Nav = styled.div`
 margin-top:5px;
 font-size:35px;
 font-weight:700;
@@ -53,9 +53,12 @@ const Introduction: FunctionComponent<IntroductionProps> = function({
                 <ProfileImage profileImage={profileImage}/>
 
                 <div>
-                    <SubTitle>어디로 가지</SubTitle>
-                    <Title>I'm Junior Frontend Developer Hoon</Title>
+                    <SubTitle>Nice to Meet You,</SubTitle>
+                    {/* <Title>I'm Junior Frontend Developer Hoon</Title> */}
                 </div>
+                <Nav>
+
+                </Nav>
             </Wrapper>
         </Background>
     )

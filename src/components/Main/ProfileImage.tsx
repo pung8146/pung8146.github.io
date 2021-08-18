@@ -1,6 +1,6 @@
 import React,{FunctionComponent} from "react";
 import styled from '@emotion/styled';
-import Img, {FluidObject } from 'gatsby-image';
+import Img, { FluidObject } from 'gatsby-image';
 
 export interface ProfileImageProps {
   profileImage: FluidObject;
@@ -14,7 +14,6 @@ export interface ProfileImageProps {
 const ProfileImageWrapper = styled(Img)`
     width:120px;
     height:120px;
-    margin-left:45%;
     border-radius:50%;
 
     @media(max-width: 768px) {

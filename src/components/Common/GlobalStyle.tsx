@@ -20,10 +20,13 @@ const defaultStyle = css`
 
   a,
   a:hover {
+    box-sizing:border-box;
+    padding:10px;
     color: inherit;
     text-decoration: none;
     cursor: pointer;
   }
+
 `;
 
 const GlobalStyle: FunctionComponent = function () {

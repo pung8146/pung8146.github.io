@@ -10,7 +10,7 @@ background-color:rgba(0,0,0,0.4);
 font-family: 'Noto Sans KR', sans-serif;
 width:100%;
 color:#fff;
-background-image:url('laptop1920.jpg');
+background-image:url(laptop1920.jpg);
 `;
 
 const Wrapper = styled.div`
@@ -20,8 +20,8 @@ flex-direction: row;
 justify-content: space-between;
 align-items: flex-start;
 width:80%;
-height:400px;
-margin:0 auto;
+height:300px;
+margin:50px auto;
 
 @media(max-width:768px) {
     width:100%;

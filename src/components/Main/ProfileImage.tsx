@@ -11,11 +11,11 @@ export interface ProfileImageProps {
 // const PROFILE_IMAGE_LINK =
 //   'https://img.hani.co.kr/imgdb/resize/2019/0121/00501111_20190121.JPG';
 
+
 const ProfileImageWrapper = styled(Img)`
     width:120px;
     height:120px;
     border-radius:50%;
-
     @media(max-width: 768px) {
       width:80px;
       height:80px;

@@ -10,7 +10,7 @@ background-color:rgba(0,0,0,0.4);
 font-family: 'Noto Sans KR', sans-serif;
 width:100%;
 color:#fff;
-background-image:url(laptop1920.jpg);
+background-image:url(../img/laptop920.jpg);
 `;
 
 const Wrapper = styled.div`

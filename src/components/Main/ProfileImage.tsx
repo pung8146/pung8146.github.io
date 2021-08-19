@@ -16,6 +16,7 @@ const ProfileImageWrapper = styled(Img)`
     width:120px;
     height:120px;
     border-radius:50%;
+    margin-left:150px;
     @media(max-width: 768px) {
       width:80px;
       height:80px;

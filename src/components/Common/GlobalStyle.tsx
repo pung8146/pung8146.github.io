@@ -18,10 +18,13 @@ const defaultStyle = css`
     height: 100%;
   }
 
+  a{
+    padding:20px;
+  }
+
   a,
   a:hover {
     box-sizing:border-box;
-    padding:10px;
     color: inherit;
     text-decoration: none;
     cursor: pointer;

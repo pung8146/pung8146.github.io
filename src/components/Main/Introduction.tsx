@@ -6,11 +6,12 @@ import { Link } from 'gatsby';
 type IntroductionProps = ProfileImageProps;
 
 const Background = styled.div`
-background-color:rgba(0,0,0,0.4);
+background-color:rgba(0,0,0,1);
 font-family: 'Noto Sans KR', sans-serif;
 width:100%;
 color:#fff;
-background-image:url(../img/laptop920.jpg);
+background-image:url(laptop1920.jpg);
+background-size:100%;
 `;
 
 const Wrapper = styled.div`
@@ -20,7 +21,7 @@ flex-direction: row;
 justify-content: space-between;
 align-items: flex-start;
 width:80%;
-height:300px;
+height:400px;   
 margin:50px auto;
 
 @media(max-width:768px) {

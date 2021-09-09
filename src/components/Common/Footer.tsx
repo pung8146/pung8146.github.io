@@ -25,10 +25,10 @@ const Footer: FunctionComponent = function () {
           
         <FooterWrapper>
         <ul>
-            <Link to="https://github.com/pung8146"><img src="./../img/icon/git-hub.png" /></Link>
-            <Link to="https://sanghoon94.tistory.com/"><img src="./../img/icon/git-hub.png" /></Link>
-            <Link to="www.naver.com"><img src="./../img/icon/git-hub.png" /></Link>
-            <Link to="www.naver.com"><img src="./../img/icon/git-hub.png" /></Link>
+            <Link to="https://github.com/pung8146"><img src="./img/icon/git-hub.png" /></Link>
+            <Link to="https://sanghoon94.tistory.com/"><img src="../img/icon/tistory.png" /></Link>
+            <Link to="www.naver.com"><img src="./../img/icon/instagram.png" /></Link>
+            <Link to="www.naver.com"><img src="../../img/icon/facebook.png" /></Link>
           </ul>
             <h3>Thank You for Visiting My Blog, Have a Good Day
             <br />Powerd By Gatsby / Mady Year 2021</h3>

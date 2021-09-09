@@ -3,7 +3,7 @@ date: '2021-09-09'
 title: 'TypeScript 적용'
 categories: ['Projects']
 summary: '가츠비 블로그에 타입스크립트를 적용시켜보기'
-thumbnail: './test.png'
+thumbnail: '../img/typescript.jpeg'
 ---
 #### 타입스크립트는 초기에 설치해서 진행하는게 좋지만 나중에 설치해서 사용가능하다!
 

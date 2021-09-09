@@ -49,27 +49,6 @@ postion: right;
     font-size:25px;
 `;
 
-let lastKnownScrollPosition = 0;
-let ticking = false;
-
-function doSomething(scrollPos) {
-    // Do something with the scroll position
-  }
-
-function navBar(e) {
-    window.addEventListener(`scroll`,function(e){
-        lastKnownScrollPosition = window.scrollY;
-
-        if (!ticking) {
-          window.requestAnimationFrame(function() {
-            doSomething(lastKnownScrollPosition);
-            ticking = false;
-          });
-      
-          ticking = true;
-        }
-    })
-}
 
 const Introduction: FunctionComponent<IntroductionProps> = function({
     profileImage,

@@ -6,13 +6,12 @@ const FooterWrapper = styled.footer`
   display: grid;
   place-items: center;
   margin-top: auto;
-  padding: 50px 0;
+  padding: 40px 0;
   font-size: 15px;
   text-align: center;
-  line-height: 1.5;
+  line-height: 2;
   color:#fff;
   background:black;
-
   @media (max-width: 768px) {
     font-size: 13px;
   }
@@ -25,10 +24,10 @@ const Footer: FunctionComponent = function () {
           
         <FooterWrapper>
         <ul>
-            <Link to="https://github.com/pung8146"><img src="./img/icon/git-hub.png" /></Link>
-            <Link to="https://sanghoon94.tistory.com/"><img src="../img/icon/tistory.png" /></Link>
-            <Link to="www.naver.com"><img src="./../img/icon/instagram.png" /></Link>
-            <Link to="www.naver.com"><img src="../../img/icon/facebook.png" /></Link>
+            <Link to="https://github.com/pung8146"><img alt="git-hub" src="../img/git-hub.png" width="50vh" /></Link>
+            <Link to="https://sanghoon94.tistory.com/"><img alt="tistory" src="../img/tistory.png" width="50vh"/></Link>
+            <Link to="https://www.instagram.com/parksh_heart/"><img alt="instargram" src="../img/instagram.png" width="50vh"/></Link>
+            <Link to="https://www.facebook.com/profile.php?id=100003171219923"><img alt="facebook" src="../img/facebook.png" width="50vh"/></Link>
           </ul>
             <h3>Thank You for Visiting My Blog, Have a Good Day
             <br />Powerd By Gatsby / Mady Year 2021</h3>

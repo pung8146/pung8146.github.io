@@ -1,0 +1,113 @@
+[33mcommit 57182fc36b394331b2c84b8537bf92b38036b4d2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Wed Nov 10 11:07:29 2021 +0900
+
+    bug3
+
+[33mcommit df8f668f528e422361ccd3d9df8a6f3b40c7ae89[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Wed Nov 10 10:53:46 2021 +0900
+
+    bug 2..
+
+[33mcommit 9c211ed82d0d579a1e8eb2a8213a238215a0ee2a[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Wed Nov 10 10:37:36 2021 +0900
+
+    Oh..
+
+[33mcommit 0d21e97b296608cc9edd43653eb80baa9df7468f[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Thu Sep 2 15:53:50 2021 +0900
+
+    Updates
+
+[33mcommit daa20be2cf7d58d6dc4971536d3012736f91718c[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Thu Aug 19 10:40:48 2021 +0900
+
+    Updates
+
+[33mcommit 3f8695f69824f50beb611ff2f219d260a9e6b98b[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Fri Aug 13 08:20:24 2021 +0900
+
+    Updates
+
+[33mcommit 310e1fdc8eaaea66e3474d4bf459b249e52d3378[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Fri Aug 13 08:17:20 2021 +0900
+
+    Updates
+
+[33mcommit 201f79a7399538c12f07f5467832f229a88463cc[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Fri Aug 13 08:10:25 2021 +0900
+
+    Updates
+
+[33mcommit e052528e6f42c47ca6d3cf74caf4a787f8116db9[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Thu Aug 12 16:30:30 2021 +0900
+
+    상단네비바 변경
+
+[33mcommit 90111288ff67f9273a183c1965e8b4fd4fe58145[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Tue Aug 10 17:17:11 2021 +0900
+
+    Initial Commit
+
+[33mcommit 689f27b59abe0df4645b366882ddffc9707ba2e4[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Tue Aug 10 16:49:37 2021 +0900
+
+    Made ! gatsby blog !
+
+[33mcommit 48ed6bcc4f7f262866c515b19c973da973922b85[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Wed Aug 4 11:39:31 2021 +0900
+
+    인피니티 스크롤 기능 구현
+
+[33mcommit 1b49ec328a0debc0f5c309011f57dda823a8e45d[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Wed Aug 4 09:20:25 2021 +0900
+
+    카테고리 생성 및 카테골별로 포스트아이템 띄어주기
+
+[33mcommit 526a5d6716b6f2f0106ff286c99030956e1a1952[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Thu Jul 29 10:47:05 2021 +0900
+
+    카테고리 생성 및 카테고리별로 포스트 아이템 띄워주기!
+
+[33mcommit b2044e3ac80019b8428d8911865f260909a93874[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Thu Jul 29 10:11:39 2021 +0900
+
+    error) childImageSharp undefinend
+
+[33mcommit bd4bf77cad77a9aa98d953afa654db23a2c749cf[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Thu Jul 29 07:12:34 2021 +0900
+
+    Markdown 을 사용하기 위한 라이브러리 설치
+
+[33mcommit aace60ed6e24e12d7cbca724ac283019dfe42f9e[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Wed Jul 28 18:53:30 2021 +0900
+
+    게시글 목록 부분 컴포넌트 구현하기
+
+[33mcommit 5a72553547dfd52d27fbe66440280fac4c90dcda[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Tue Jul 27 17:51:38 2021 +0900
+
+    카테고리 목록 컴포넌트 구성
+
+[33mcommit 173fe7ca4fc0e9a3e504d3928d0bc3b04b915069[m
+Author: pung8146 <pung8146@naver.com>
+Date:   Sat Jun 26 10:56:24 2021 +0900
+
+    Initial commit from gatsby: (https://github.com/gatsbyjs/gatsby-starter-default.git)

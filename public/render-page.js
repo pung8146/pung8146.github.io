@@ -13,7 +13,8 @@
   
 
 exports.ssrComponents = {
-  "component---cache-dev-404-page-js": preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js"))
+  "component---cache-dev-404-page-js": preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js")),
+  "component---src-pages-index-tsx": preferDefault(__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'C:\\Users\\Hoon\\blogGatsby\\src\\pages\\index.tsx'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())))
   }
 
 
